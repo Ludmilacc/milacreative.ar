@@ -165,12 +165,11 @@ header {
 }
 
 .hero-tagline {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: var(--ink);
-  margin-top: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--muted);
+  margin-top: 10px;
   max-width: 42ch;
 }
 
