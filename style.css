@@ -43,21 +43,23 @@ img { max-width: 100%; display: block; }
 
 .lorem-track {
   position: absolute;
-  top: -25%;
-  left: -15%;
-  width: 150%;
+  top: -60%;
+  left: -40%;
+  width: 220%;
+  height: 260%;
   transform: rotate(-7deg);
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 92px;
-  line-height: 1.05;
+  font-size: 34px;
+  line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--pink);
-  opacity: 0.12;
+  opacity: 0.14;
   white-space: normal;
-  word-spacing: 14px;
+  word-spacing: 8px;
   user-select: none;
   will-change: transform;
+  overflow: hidden;
 }
 
 /* Todo el contenido real va encima del fondo decorativo */
@@ -162,6 +164,16 @@ header {
   color: var(--ink);
 }
 
+.hero-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-top: 14px;
+  max-width: 42ch;
+}
+
 .hero-actions {
   margin-top: 34px;
   display: flex;
@@ -244,6 +256,68 @@ header {
   line-height: 1.08;
   max-width: 16ch;
   margin: 0 0 48px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .category-grid { grid-template-columns: 1fr; }
+}
+
+.category-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.category-num {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--pink);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.category-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 18px;
+}
+
+.sub-list { margin: 0; padding: 0; list-style: none; }
+
+.sub-list li {
+  font-size: 14px;
+  color: var(--muted);
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.sub-list li:first-child { border-top: none; padding-top: 0; }
+
+.sub-list strong {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 760px) {
+  .content-grid { grid-template-columns: 1fr; }
 }
 
 .card-grid {
