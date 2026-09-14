@@ -1,170 +1,448 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mila Creative.ar — Diseño y contenido para marcas</title>
-<meta name="description" content="Mila Creative.ar - Branding, packaging, diseño web y contenido mensual para redes.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Manrope:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+:root {
+  --bg: #C1FF72;
+  --white: #FFFFFF;
+  --ink: #16171A;
+  --pink: #CC007E;
+  --muted: #4A4A42;
+  --border: rgba(22, 23, 26, 0.12);
+  --border-strong: rgba(22, 23, 26, 0.28);
+}
 
-<div class="lorem-layer" aria-hidden="true">
-  <div class="lorem-track" id="loremTrack">
-    lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur
-  </div>
-</div>
+* { box-sizing: border-box; }
 
-<header>
-  <nav class="nav">
-    <a href="#" class="logo">Mila Creative.ar</a>
-    <ul class="nav-links">
-      <li><a href="#diseno">Diseño</a></li>
-      <li><a href="#contenido">Contenido</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <a href="#contacto" class="nav-cta">Escribime</a>
-  </nav>
-</header>
+html { scroll-behavior: smooth; }
 
-<main>
-  <section class="hero">
-    <div>
-      <p class="hero-kicker">Diseño gráfico &amp; creación de contenido</p>
-      <h1>La creatividad exige <span class="accent">coraje.</span></h1>
-      <p class="hero-subhead">Mucho gusto, soy <strong>Ludmila Coria</strong> y esto es Mila Creative.</p>
-      <p class="hero-tagline">Un placer, esto es MilaCreative.ar</p>
-      <div class="hero-actions">
-        <a href="#diseno" class="btn btn-primary">Ver portfolio</a>
-        <a href="#contacto" class="btn btn-ghost">Trabajemos juntas</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <div class="photo-circle">
-        <span class="initials">LC</span>
-        <span class="hint">Tu foto acá</span>
-      </div>
-      <span class="photo-tag">Ludmila Coria</span>
-    </div>
-  </section>
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  position: relative;
+}
 
-  <section class="rubro" id="diseno">
-    <p class="rubro-label">Diseño</p>
-    <h2 class="rubro-title">Hagamos que tu proyecto se anime a más.</h2>
+a { color: inherit; }
+img { max-width: 100%; display: block; }
 
-    <div class="category-grid">
-      <article class="category-card">
-        <span class="category-num">01</span>
-        <h3>Identidad &amp; Branding</h3>
-        <ul class="sub-list">
-          <li><strong>Emprendedores (Starter)</strong>Logo esencial, variantes y paleta básica para dar tus primeros pasos.</li>
-          <li><strong>Branding &amp; Rediseño</strong>Identidad visual integral desde cero o renovación total de tu marca actual.</li>
-          <li><strong>Packaging &amp; Papelería</strong>Diseño de etiquetas, cajas, bolsas y piezas gráficas para productos físicos.</li>
-        </ul>
-        <button class="ver-mas" aria-expanded="false" data-target="detail-01">Ver más +</button>
-        <div class="card-detail" id="detail-01" hidden>
-          Incluye research de referentes, moodboard y hasta 2 rondas de revisión. Tiempo estimado: 2 a 3 semanas.
-        </div>
-      </article>
+:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 3px;
+}
 
-      <article class="category-card">
-        <span class="category-num">02</span>
-        <h3>Redes &amp; Contenido</h3>
-        <ul class="sub-list">
-          <li><strong>Social Media Kits</strong>Plantillas editables para feed y stories alineadas a tu estética.</li>
-          <li><strong>Carruseles &amp; Contenido</strong>Diseño de piezas visuales de alto impacto listas para publicar.</li>
-          <li><strong>Packs Mensuales</strong>Acompañamiento continuo en diseño y contenido para tus canales.</li>
-        </ul>
-        <button class="ver-mas" aria-expanded="false" data-target="detail-02">Ver más +</button>
-        <div class="card-detail" id="detail-02" hidden>
-          Piezas editables en Canva o Illustrator, listas para publicar. Entrega semanal o quincenal según el plan que elijas.
-        </div>
-      </article>
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
 
-      <article class="category-card">
-        <span class="category-num">03</span>
-        <h3>Web, UX/UI &amp; E-commerce</h3>
-        <ul class="sub-list">
-          <li><strong>Tiendas Online</strong>Personalización de tiendas prediseñadas (Tiendanube / Shopify).</li>
-          <li><strong>Landing Pages</strong>Sitios web de una página, dinámicos y adaptados a celular.</li>
-          <li><strong>Diseño UX/UI</strong>Prototipado y diseño de interfaces web intuitivas a medida.</li>
-        </ul>
-        <button class="ver-mas" aria-expanded="false" data-target="detail-03">Ver más +</button>
-        <div class="card-detail" id="detail-03" hidden>
-          Incluye reunión de relevamiento, wireframes y hasta 2 rondas de ajustes. Tiempo estimado: 2 a 4 semanas según alcance.
-        </div>
-      </article>
-    </div>
-  </section>
+/* Fondo decorativo lorem ipsum */
+.lorem-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
 
-  <section class="rubro" id="contenido">
-    <p class="rubro-label">Content Creation</p>
-    <h2 class="rubro-title">Videos que frenan el scroll.</h2>
+.lorem-track {
+  position: absolute;
+  top: -60%;
+  left: -40%;
+  width: 220%;
+  height: 260%;
+  transform: rotate(-7deg);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: var(--pink);
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  white-space: normal;
+  word-spacing: 8px;
+  user-select: none;
+  will-change: transform;
+}
 
-    <div class="content-grid">
-      <article class="card">
-        <span class="card-tag">Mensual</span>
-        <h3>Contenido Mensual</h3>
-        <p>Estrategia, planificación, guionado, grabación y edición integral para el día a día de tu marca.</p>
-        <button class="ver-mas" aria-expanded="false" data-target="detail-mensual">Ver más +</button>
-        <div class="card-detail" id="detail-mensual" hidden>
-          Incluye reunión mensual de planificación, guion, grabación en tu espacio o el mío, y edición final entregada lista para publicar.
-        </div>
-      </article>
+/* Todo el contenido real va encima del fondo decorativo */
+header, main, footer { position: relative; z-index: 1; }
 
-      <article class="card">
-        <span class="card-tag">Producto</span>
-        <h3>Contenido de Producto</h3>
-        <p>Co-creación de guion y edición alineada a tu identidad visual, pensado para destacar y vender tus productos.</p>
-        <button class="ver-mas" aria-expanded="false" data-target="detail-producto">Ver más +</button>
-        <div class="card-detail" id="detail-producto" hidden>
-          Ideal para lanzamientos: grabamos y editamos contenido que muestra tu producto en acción, listo para pauta o feed.
-        </div>
-      </article>
-    </div>
-  </section>
-</main>
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
 
-<footer id="contacto">
-  <div class="footer-inner">
-    <div class="footer-cta">
-      <h2>¿Empezamos tu proyecto?</h2>
-    </div>
-    <ul class="footer-links">
-      <li><a href="mailto:hola@milacreative.ar">hola@milacreative.ar</a></li>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">TikTok</a></li>
-    </ul>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Mila Creative.ar</span>
-    <span>Buenos Aires, Argentina</span>
-  </div>
-</footer>
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 32px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
 
-<script>
-  var track = document.getElementById('loremTrack');
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!prefersReduced) {
-    window.addEventListener('scroll', function () {
-      var offset = window.scrollY * 0.12;
-      track.style.transform = 'rotate(-7deg) translateY(' + offset + 'px)';
-    }, { passive: true });
-  }
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
 
-  document.querySelectorAll('.ver-mas').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var detail = document.getElementById(btn.dataset.target);
-      var isOpen = btn.getAttribute('aria-expanded') === 'true';
-      detail.hidden = isOpen;
-      btn.setAttribute('aria-expanded', String(!isOpen));
-      btn.textContent = isOpen ? 'Ver más +' : 'Ver menos –';
-    });
-  });
-</script>
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-</body>
-</html>
+.nav-links a {
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+}
+
+.nav-links a:hover { border-color: var(--ink); }
+
+.nav-cta {
+  display: inline-block;
+  background: var(--pink);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Hero */
+.hero {
+  padding: 110px 32px 100px;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-kicker {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--pink);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(40px, 5.6vw, 66px);
+  line-height: 1.08;
+  margin: 0;
+  max-width: 14ch;
+}
+
+.hero h1 .accent { color: var(--pink); }
+
+.hero-subhead {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--muted);
+  margin-top: 22px;
+  max-width: 42ch;
+}
+
+.hero-subhead strong {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.hero-tagline {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--muted);
+  margin-top: 10px;
+  max-width: 42ch;
+}
+
+.hero-actions {
+  margin-top: 34px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border: 1.5px solid var(--ink);
+}
+
+.btn-primary { background: var(--ink); color: var(--white); }
+.btn-primary:hover { background: var(--pink); border-color: var(--pink); }
+.btn-ghost { background: transparent; color: var(--ink); }
+.btn-ghost:hover { background: var(--white); }
+
+.hero-photo { position: relative; justify-self: center; }
+
+.photo-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1.5px dashed var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.photo-circle .initials {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--ink);
+}
+
+.photo-circle .hint { font-size: 13px; }
+
+.photo-tag {
+  position: absolute;
+  bottom: 10px;
+  right: -8px;
+  background: var(--pink);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+/* Rubros: Diseño / Contenido */
+.rubro { padding: 60px 32px; max-width: 1120px; margin: 0 auto; }
+
+.rubro-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--pink);
+  margin-bottom: 14px;
+}
+
+.rubro-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(34px, 4.4vw, 54px);
+  line-height: 1.08;
+  max-width: 16ch;
+  margin: 0 0 48px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .category-grid { grid-template-columns: 1fr; }
+}
+
+.category-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.category-num {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--pink);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.category-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 18px;
+}
+
+.sub-list { margin: 0; padding: 0; list-style: none; }
+
+.sub-list li {
+  font-size: 14px;
+  color: var(--muted);
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.sub-list li:first-child { border-top: none; padding-top: 0; }
+
+.sub-list strong {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 760px) {
+  .content-grid { grid-template-columns: 1fr; }
+}
+
+.ver-mas {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 18px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1.5px solid var(--pink);
+  color: var(--pink);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ver-mas:hover { background: var(--pink); color: var(--white); }
+
+.card-detail {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.card-detail[hidden] { display: none; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.card {
+  grid-column: span 3;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.card.wide { grid-column: span 6; }
+
+@media (max-width: 760px) {
+  .card, .card.wide { grid-column: span 6; }
+}
+
+.card-tag {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--pink);
+  border: 1px solid var(--pink);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.card p { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
+
+.card ul { margin: 0; padding: 0; list-style: none; font-size: 14px; }
+
+.card li { padding: 7px 0; border-top: 1px solid var(--border); }
+.card li:first-child { border-top: none; }
+
+/* Footer */
+footer { border-top: 1px solid var(--border); padding: 60px 32px 40px; }
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-cta h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 3.6vw, 38px);
+  max-width: 12ch;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.footer-links a { text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; }
+
+.footer-bottom {
+  max-width: 1120px;
+  margin: 40px auto 0;
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-photo { justify-self: start; }
+  .photo-circle { width: 220px; height: 220px; }
+  .lorem-track { font-size: 60px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .lorem-track { transform: rotate(-7deg) !important; }
+}
