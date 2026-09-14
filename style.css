@@ -1,9 +1,10 @@
 :root {
-  --bg: #FAFAF7;
+  --bg: #F4EEDD;
   --white: #FFFFFF;
   --ink: #1A1A1A;
-  --pink: #B8336A;
-  --mustard: #E8A33D;
+  --pink: #EC5FA0;
+  --blue: #F2793C;
+  --mustard: #2F9E8F;
   --muted: #6B6A63;
   --border: rgba(26, 26, 26, 0.12);
   --border-strong: rgba(26, 26, 26, 0.28);
@@ -212,6 +213,46 @@ header {
   z-index: -1;
 }
 
+.shape-circle {
+  position: absolute;
+  top: -26px;
+  right: 30px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--pink);
+  z-index: 2;
+}
+
+.shape-triangle {
+  position: absolute;
+  bottom: -10px;
+  left: -34px;
+  width: 0;
+  height: 0;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  border-bottom: 54px solid var(--blue);
+  transform: rotate(12deg);
+  z-index: 2;
+}
+
+.shape-check {
+  position: absolute;
+  bottom: 44px;
+  right: -22px;
+  width: 48px;
+  height: 48px;
+  background-image:
+    linear-gradient(45deg, var(--ink) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--ink) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--ink) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--ink) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  z-index: 2;
+}
+
 .photo-circle {
   width: 300px;
   height: 300px;
@@ -287,7 +328,7 @@ header {
   padding: 32px;
 }
 
-.category-card:nth-child(2) { border-top-color: var(--mustard); }
+.category-card:nth-child(2) { border-top-color: var(--blue); }
 
 .category-num {
   display: block;
@@ -299,7 +340,9 @@ header {
   margin-bottom: 12px;
 }
 
-.category-card:nth-child(2) .category-num { color: var(--mustard); }
+.category-card:nth-child(2) .category-num { color: var(--blue); }
+.category-card:nth-child(3) { border-top-color: var(--mustard); }
+.category-card:nth-child(3) .category-num { color: var(--mustard); }
 
 .category-card h3 {
   font-family: 'Poppins', sans-serif;
@@ -380,7 +423,7 @@ header {
   padding: 32px;
 }
 
-.content-grid .card:nth-child(2) { border-top-color: var(--mustard); }
+.content-grid .card:nth-child(2) { border-top-color: var(--blue); }
 
 .card.wide { grid-column: span 6; }
 
@@ -401,8 +444,8 @@ header {
 }
 
 .content-grid .card:nth-child(2) .card-tag {
-  color: var(--mustard);
-  border-color: var(--mustard);
+  color: var(--blue);
+  border-color: var(--blue);
 }
 
 .card h3 {
