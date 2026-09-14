@@ -1,11 +1,12 @@
 :root {
-  --bg: #C1FF72;
+  --bg: #FAFAF7;
   --white: #FFFFFF;
-  --ink: #16171A;
-  --pink: #CC007E;
-  --muted: #4A4A42;
-  --border: rgba(22, 23, 26, 0.12);
-  --border-strong: rgba(22, 23, 26, 0.28);
+  --ink: #1A1A1A;
+  --pink: #B8336A;
+  --mustard: #E8A33D;
+  --muted: #6B6A63;
+  --border: rgba(26, 26, 26, 0.12);
+  --border-strong: rgba(26, 26, 26, 0.28);
 }
 
 * { box-sizing: border-box; }
@@ -54,8 +55,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--pink);
-  opacity: 0.4;
-  mix-blend-mode: multiply;
+  opacity: 0.06;
   white-space: normal;
   word-spacing: 8px;
   user-select: none;
@@ -200,6 +200,18 @@ header {
 
 .hero-photo { position: relative; justify-self: center; }
 
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid var(--mustard);
+  z-index: -1;
+}
+
 .photo-circle {
   width: 300px;
   height: 300px;
@@ -269,9 +281,13 @@ header {
 
 .category-card {
   background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--pink);
   border-radius: 10px;
   padding: 32px;
 }
+
+.category-card:nth-child(2) { border-top-color: var(--mustard); }
 
 .category-num {
   display: block;
@@ -282,6 +298,8 @@ header {
   line-height: 1;
   margin-bottom: 12px;
 }
+
+.category-card:nth-child(2) .category-num { color: var(--mustard); }
 
 .category-card h3 {
   font-family: 'Poppins', sans-serif;
@@ -356,9 +374,13 @@ header {
 .card {
   grid-column: span 3;
   background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--pink);
   border-radius: 10px;
   padding: 32px;
 }
+
+.content-grid .card:nth-child(2) { border-top-color: var(--mustard); }
 
 .card.wide { grid-column: span 6; }
 
@@ -376,6 +398,11 @@ header {
   padding: 4px 12px;
   border-radius: 999px;
   margin-bottom: 18px;
+}
+
+.content-grid .card:nth-child(2) .card-tag {
+  color: var(--mustard);
+  border-color: var(--mustard);
 }
 
 .card h3 {
