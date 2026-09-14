@@ -54,12 +54,12 @@ img { max-width: 100%; display: block; }
   line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--pink);
-  opacity: 0.14;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
   white-space: normal;
   word-spacing: 8px;
   user-select: none;
   will-change: transform;
-  overflow: hidden;
 }
 
 /* Todo el contenido real va encima del fondo decorativo */
@@ -318,6 +318,34 @@ header {
 @media (max-width: 760px) {
   .content-grid { grid-template-columns: 1fr; }
 }
+
+.ver-mas {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 18px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1.5px solid var(--pink);
+  color: var(--pink);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ver-mas:hover { background: var(--pink); color: var(--white); }
+
+.card-detail {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.card-detail[hidden] { display: none; }
 
 .card-grid {
   display: grid;
