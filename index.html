@@ -36,7 +36,7 @@
       <p class="hero-kicker">Diseño gráfico &amp; creación de contenido</p>
       <h1>La creatividad exige <span class="accent">coraje.</span></h1>
       <p class="hero-subhead">Mucho gusto, soy <strong>Ludmila Coria</strong> y esto es Mila Creative.</p>
-      <p class="hero-tagline">Un placer, esto es milacreative.ar</p>
+      <p class="hero-tagline">Un placer, esto es MilaCreative.ar</p>
       <div class="hero-actions">
         <a href="#diseno" class="btn btn-primary">Ver portfolio</a>
         <a href="#contacto" class="btn btn-ghost">Trabajemos juntas</a>
@@ -64,6 +64,10 @@
           <li><strong>Branding &amp; Rediseño</strong>Identidad visual integral desde cero o renovación total de tu marca actual.</li>
           <li><strong>Packaging &amp; Papelería</strong>Diseño de etiquetas, cajas, bolsas y piezas gráficas para productos físicos.</li>
         </ul>
+        <button class="ver-mas" aria-expanded="false" data-target="detail-01">Ver más +</button>
+        <div class="card-detail" id="detail-01" hidden>
+          Incluye research de referentes, moodboard y hasta 2 rondas de revisión. Tiempo estimado: 2 a 3 semanas.
+        </div>
       </article>
 
       <article class="category-card">
@@ -74,6 +78,10 @@
           <li><strong>Carruseles &amp; Contenido</strong>Diseño de piezas visuales de alto impacto listas para publicar.</li>
           <li><strong>Packs Mensuales</strong>Acompañamiento continuo en diseño y contenido para tus canales.</li>
         </ul>
+        <button class="ver-mas" aria-expanded="false" data-target="detail-02">Ver más +</button>
+        <div class="card-detail" id="detail-02" hidden>
+          Piezas editables en Canva o Illustrator, listas para publicar. Entrega semanal o quincenal según el plan que elijas.
+        </div>
       </article>
 
       <article class="category-card">
@@ -84,6 +92,10 @@
           <li><strong>Landing Pages</strong>Sitios web de una página, dinámicos y adaptados a celular.</li>
           <li><strong>Diseño UX/UI</strong>Prototipado y diseño de interfaces web intuitivas a medida.</li>
         </ul>
+        <button class="ver-mas" aria-expanded="false" data-target="detail-03">Ver más +</button>
+        <div class="card-detail" id="detail-03" hidden>
+          Incluye reunión de relevamiento, wireframes y hasta 2 rondas de ajustes. Tiempo estimado: 2 a 4 semanas según alcance.
+        </div>
       </article>
     </div>
   </section>
@@ -97,12 +109,20 @@
         <span class="card-tag">Mensual</span>
         <h3>Contenido Mensual</h3>
         <p>Estrategia, planificación, guionado, grabación y edición integral para el día a día de tu marca.</p>
+        <button class="ver-mas" aria-expanded="false" data-target="detail-mensual">Ver más +</button>
+        <div class="card-detail" id="detail-mensual" hidden>
+          Incluye reunión mensual de planificación, guion, grabación en tu espacio o el mío, y edición final entregada lista para publicar.
+        </div>
       </article>
 
       <article class="card">
         <span class="card-tag">Producto</span>
         <h3>Contenido de Producto</h3>
         <p>Co-creación de guion y edición alineada a tu identidad visual, pensado para destacar y vender tus productos.</p>
+        <button class="ver-mas" aria-expanded="false" data-target="detail-producto">Ver más +</button>
+        <div class="card-detail" id="detail-producto" hidden>
+          Ideal para lanzamientos: grabamos y editamos contenido que muestra tu producto en acción, listo para pauta o feed.
+        </div>
       </article>
     </div>
   </section>
@@ -134,6 +154,16 @@
       track.style.transform = 'rotate(-7deg) translateY(' + offset + 'px)';
     }, { passive: true });
   }
+
+  document.querySelectorAll('.ver-mas').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var detail = document.getElementById(btn.dataset.target);
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      detail.hidden = isOpen;
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      btn.textContent = isOpen ? 'Ver más +' : 'Ver menos –';
+    });
+  });
 </script>
 
 </body>
